@@ -1,0 +1,122 @@
+.movies-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+  }
+  
+  .movies-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .movie-card {
+    background: #1f1f1f;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .no-movies {
+    font-size: 1.2rem;
+    color: gray;
+  }
+  .movie-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #ddd;
+  }
+  .movie-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #ddd;
+  }
+  .movies-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1a1a2e;
+  }
+  
+  .movies-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    padding-top:20px;
+    margin-top: 10px;
+  }
+  
+  /* Movie Grid Layout */
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures responsiveness */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Movie Card */
+  .movie-card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 204, 0, 0.5);
+  }
+  
+  /* Movie Poster - Fixed Size */
+  .movie-poster {
+    width: 100%;
+    height: 350px; /* Ensures uniform height */
+    object-fit: cover; /* Ensures image fits while maintaining aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Movie Title */
+  .movie-title {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Movie Link */
+  .movie-link {
+    text-decoration: none;
+  }
+  

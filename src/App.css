@@ -36,3 +36,4643 @@
     transform: rotate(360deg);
   }
 }
+/* 🎬 General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0e0b16; /* Dark background */
+  color: white;
+}
+
+/* 🌟 Movie Details Page */
+.movie-details-container {
+  position: relative;
+  max-width: 450px;
+  margin: auto;
+  height: 100vh;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), #1e1e2e);
+}
+
+.movie-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.movie-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.movie-description {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+}
+
+/* 🎟️ Reservation Button */
+.reserve-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.reserve-button:hover {
+  transform: scale(1.05);
+}
+
+/* 💳 Checkout Page */
+.checkout-container {
+  max-width: 450px;
+  margin: auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #3b5998, #0e0b16);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.summary-box {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.price-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.payment-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.payment-button:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* 🎭 Seat Selection */
+.seat-selection-container {
+  max-width: 450px;
+  margin: auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #2e2e4e, #0e0b16);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #444;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.seat:hover {
+  background-color: #ff416c;
+}
+
+.seat.selected {
+  background-color: #ff4b2b;
+}
+
+.confirm-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.confirm-button:hover {
+  transform: scale(1.05);
+}
+/* 🎨 Global Styles */
+body {
+  background: linear-gradient(to bottom, #ffccff, #d9a7ff, #c2e9fb);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 📱 Responsive Container */
+.container {
+  max-width: 450px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 🟣 Buttons */
+button {
+  background: linear-gradient(90deg, #ff66b2, #a855f7, #4f46e5);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+/* 🌟 Section Headers */
+h1, h2, h3 {
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 🟦 Cards */
+.card {
+  background: linear-gradient(135deg, #a855f7 20%, #4f46e5 80%);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+}
+
+/* 🎬 Home Page */
+.home-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.movie-card {
+  background: linear-gradient(135deg, #ff66b2 20%, #a855f7 80%);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* 🎥 Movie Details */
+.movie-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.movie-description {
+  font-size: 16px;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* 🎟 Seat Selection */
+.seat-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  gap: 8px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.seat {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.seat.selected {
+  background: #ff66b2;
+  color: white;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+}
+
+/* 💳 Checkout */
+.checkout-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.checkout-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.checkout-summary {
+  background: linear-gradient(135deg, #ff66b2, #a855f7);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pay-button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* 🔙 Navbar & Back Button */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #a855f7, #4f46e5);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.menu-button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+/* 🎭 Theater Screen */
+.screen {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 10px;
+  background: #222;
+  color: white;
+  border-radius: 5px;
+}
+
+/* 🎭 Theater Grid Layout */
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🎭 Seat Row */
+.seat-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* 🎭 Individual Seat */
+.seat {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* 🎭 Seat Icon */
+.seat-icon {
+  font-size: 40px;
+}
+
+/* 🎭 Seat Number */
+.seat-number {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 0px 3px black;
+}
+
+/* 🎭 Available Seat */
+.seat.available .seat-icon {
+  color: #00cc66; /* Green */
+}
+
+/* 🎭 Selected Seat */
+.seat.selected .seat-icon {
+  color: #4d79ff; /* Blue */
+  transform: scale(1.1);
+}
+
+/* 🎭 Reserved Seat */
+.seat.reserved .seat-icon {
+  color: #ff4d4d; /* Red */
+  cursor: not-allowed;
+}
+
+/* 🎭 Legend Section */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.available-icon {
+  color: #00cc66;
+}
+.selected-icon {
+  color: #4d79ff;
+}
+.reserved-icon {
+  color: #ff4d4d;
+}
+
+/* 🎟️ Selected Seats Section */
+.selected-seats {
+  text-align: center;
+  margin-top: 20px;
+}
+/* 🌟 Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #1e1e2e;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔥 Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ff8c42;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* 🎟️ Buttons */
+.cta-button {
+  display: inline-block;
+  background: #ffd700;
+  color: #1e1e2e;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+  margin: 10px;
+}
+
+.cta-button:hover {
+  background: #e63946;
+  color: white;
+}
+
+/* 🖼️ Feature Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  height: 220px;
+}
+
+.feature-card h2 {
+  font-size: 1.3rem;
+  color: #4a90e2;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* 🎥 Images */
+.feature-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #a18cd1);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Home Container */
+.home-container {
+  padding: 50px 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-button {
+  background: #6a11cb;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #2575fc;
+  transform: scale(1.1);
+}
+
+/* Feature Section */
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.feature-card img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+}.home-container {
+  text-align: center;
+  margin-top: 80px; /* Space below navbar */
+}
+
+.hero {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.cta-button {
+  background-color: #ff416c;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #ff5e6c;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.submit-button {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 100px;
+  background: #f5f5f5;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  padding-right: 40px;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-text h3 {
+  font-size: 22px;
+  color: #007bff;
+  margin-top: 15px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 100px;
+  background: #f5f5f5;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact-form {
+  flex: 1;
+  text-align: left;
+  padding-right: 40px;
+}
+
+.contact-form h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-button {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background: #0056b3;
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+}
+/* Contact Us Page - Full Page Centered */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Contact Content - Side-by-Side Layout */
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side - Contact Form */
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+/* Contact Form Button */
+.contact-button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background: #e6b800;
+}
+
+/* Right Side - Contact Image */
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* About Us Page - Full Page Centered */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Same as Home Page */
+}
+
+/* About Card - Covers Full Page Center */
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+/* About Sections */
+.about-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.about-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* About Image */
+.about-image {
+  margin-top: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* 🎬 About Us Page Styling */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a); /* Dark cinematic feel */
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* 🏆 About Us Title */
+.about-container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffcc00; /* Golden highlight for a premium feel */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7);
+}
+
+/* 📜 About Us Text Sections */
+.about-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-section:hover {
+  transform: scale(1.03);
+}
+
+.about-section h3 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* 🎥 Team Image */
+.about-image {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* 🎬 About Us Page Styling */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a); /* Dark cinematic feel */
+  color: #ffffff;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* 📜 Main Content Layout */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1100px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+}
+
+/* 📖 Text Section */
+.about-text {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffcc00; /* Golden cinematic highlight */
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7);
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* 🎥 Image Section */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}.about-text h3 {
+  color: #d0a3ee; /* Change this to your preferred color */
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+
+/* 📱 Responsive Design */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #1a1a2e, #16213e);
+  color: white;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text h3 {
+  color: #ffcc00; /* Change this if you want */
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact-button {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #e6b800;
+}
+/* Contact Us Page */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full page height */
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Similar to About Us */
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Image */
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  color: white;
+  padding: 20px;
+}
+
+.contact-form h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  background: #ff1a1a;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  padding: 20px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1000px;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
+/* Ensure image fits well */
+.contact-image {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 0%;
+  max-width: 1000px;
+  justify-content: space-between; /* Ensures proper spacing */
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  max-width: 100%;  /* Make sure the image takes full space */
+  height: auto;
+  border-radius: 10px;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Reduce height */
+  background: linear-gradient(135deg, #252542, #303054); /* Adjusted to match image */
+  padding: 20px 0;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent for modern look */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  width: 90%; /* Make it wider */
+  max-width: 1200px; /* Ensure it doesn't stretch too much */
+  min-height: 300px; /* Reduce height */
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.contact-form label {
+  color: #ffffff; /* Change to any contrasting color */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+
+.contact-form h4 {
+  color: #ffe668; /* Ensure contrast */
+  font-size: 28px; /* Adjust size */
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  margin-bottom: 20px;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Reduce height for a wider look */
+  background-color: #1a1a2e; /* Adjust background for better contrast */
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 80%; /* Make it wider */
+  width: 900px; /* Adjust width */
+}
+
+.contact-image img {
+  width: 300px; /* Ensure proper size */
+  height: auto;
+  object-fit: cover;
+}
+/* About/Contact Page Container */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
+  padding: 50px;
+}
+
+/* Main Card (About Content) */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 1100px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Left Section: Image */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Right Section: Text / Form */
+.about-text {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 18px;
+  background: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #e6b800;
+}
+/* Container that holds the card */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 20px; /* Reduced padding to prevent overflow */
+  box-sizing: border-box;
+}
+
+/* Card styling for movie details (same structure as About Us) */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px; /* Reduced from 1200px to ensure it fits on smaller screens */
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Left Column - Image */
+.about-image {
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px; /* Ensures image doesn't overflow */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+
+/* Right Column - Movie Details */
+.about-text {
+  flex: 1;
+  padding-left: 20px;
+  color: white;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7);
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.movie-meta p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Button Styling */
+.contact-button {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #e6b800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    padding: 20px;
+    max-width: 90%;
+  }
+  .about-image,
+  .about-text {
+    padding: 10px 0;
+    width: 100%;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
+/* SeatSelection.css */
+
+/* ✅ Matches Movies.js background */
+.seat-selection-container {
+ 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+/* ✅ Expanding the seat layout */
+.seats-grid {
+  width: 90%; /* Full-width like Movies.js */
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+/* Individual seat row */
+.seat-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 🎭 Seat Styles */
+.seat {
+  width: 60px;
+  height: 60px;
+  background-color: #444;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+  background-color: #ffcc00;
+}
+
+/* ✅ Reserved seats */
+.seat.reserved {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* ✅ Selected seats */
+.seat.selected {
+  background-color: #f44336;
+}
+
+/* 🎬 Screen Styling */
+.screen {
+  width: 60%;
+  height: 50px;
+  background: white;
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ✅ Button Styling */
+.proceed-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.proceed-button:hover {
+  background: #e64a19;
+}
+
+/* ✅ Legend Section */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seat-icon {
+  font-size: 24px;
+}
+
+.available-icon {
+  color: white;
+}
+
+.selected-icon {
+  color: #f44336;
+}
+
+.reserved-icon {
+  color: #555;
+}
+
+/* ✅ Full-Page Background & Layout */
+.seat-selection-container {
+  height: 100vh; /* ✅ Ensures the section fits within the screen */
+  width: 100vw; /* ✅ Covers full page width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+/* ✅ Full-Width Seat Selection Section */
+.seat-selection-card {
+  width: 100vw; /* ✅ FULL PAGE WIDTH */
+  max-width: 100%; /* ✅ Ensures no unnecessary margins */
+  height: 90vh; /* ✅ Keeps it within the screen height */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 0; /* ✅ Removes rounded corners for full-width effect */
+  box-shadow: none; /* ✅ Removes box-shadow to blend with page */
+  text-align: center;
+}
+
+/* 🎬 Screen Section (Full Width) */
+.screen {
+  width: 100%;
+  height: 60px;
+  background: white;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Seat Grid - Spans Full Width */
+.seats-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Row Spans the Entire Page Width */
+.seat-row {
+  display: flex;
+  justify-content: space-evenly; /* ✅ Evenly distributes seats */
+  width: 100%; /* ✅ Makes sure seats use full width */
+  max-width: 1400px;
+}
+
+/* 🎭 Seat Styling */
+.seat {
+  width: 90px; /* ✅ Increases seat size */
+  height: 90px;
+  background-color: #444;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+  background-color: #ffcc00;
+}
+
+/* ✅ Reserved & Selected Seats */
+.seat.reserved {
+  background-color: #555;
+  cursor: not-allowed;
+}
+.seat.selected {
+  background-color: #f44336;
+}
+
+/* ✅ Button - Full Width */
+.proceed-button {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 20px;
+  background: #ff5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.proceed-button:hover {
+  background: #e64a19;
+}
+/* ✅ Full-Page Layout */
+.seat-selection-container {
+  width: 100vw; /* ✅ FULL WIDTH */
+  height: 100vh; /* ✅ FULL HEIGHT */
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ✅ Main Card Covers Almost Entire Page */
+.seat-selection-card {
+  width: 90vw; /* ✅ Covers almost full width */
+  max-width: 1200px; /* ✅ Prevents it from being too wide */
+  height: 85vh; /* ✅ Takes almost the full height */
+  min-height: 600px; /* ✅ Prevents shrinking on small screens */
+  background: rgba(0, 0, 0, 0.85); /* ✅ Dark theme */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ✅ Pushes content to fill space */
+}
+
+/* ✅ Title */
+.seat-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Screen Section */
+.screen {
+  width: 100%;
+  height: 50px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Seat Grid - Takes Full Width */
+.seats-grid {
+  width: 100%;
+  flex-grow: 1; /* ✅ Allows seat grid to expand naturally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Each Row Covers Full Width */
+.seat-row {
+  display: flex;
+  justify-content: space-between; /* ✅ Spreads seats evenly */
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Seat Styling */
+.seat {
+  width: 75px;
+  height: 75px;
+  background-color: #444;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+  background-color: #ffcc00;
+}
+
+/* ✅ Reserved & Selected Seats */
+.seat.reserved {
+  background-color: #555;
+  cursor: not-allowed;
+}
+.seat.selected {
+  background-color: #f44336;
+}
+
+/* ✅ Legend Section - Spaced Properly */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Button - Now Positioned Correctly */
+.proceed-button {
+  padding: 15px;
+  font-size: 18px;
+  background: #ff5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  margin-top: auto; /* ✅ Pushes button to bottom */
+}
+
+.proceed-button:hover {
+  background: #e64a19;
+}
+/* ✅ Full-Page Outer Card */
+.seat-selection-container {
+  width: 100vw; /* ✅ FULL WIDTH */
+  height: 100vh; /* ✅ FULL HEIGHT */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ✅ Main Outer Card */
+.outer-card {
+  width: 90vw; /* ✅ Covers most of the page */
+  max-width: 1200px;
+  height: 85vh; /* ✅ Takes almost full height */
+  min-height: 600px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ✅ Title */
+.seat-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Inner Seat Selection Card */
+.inner-seat-card {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.1); /* ✅ Slightly transparent */
+  border: 3px solid #ffcc00; /* ✅ Highlighted border */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+/* ✅ Screen Section */
+.screen {
+  width: 100%;
+  height: 50px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Seat Grid */
+.seats-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Each Row Covers Full Width */
+.seat-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Seat Styling */
+.seat {
+  width: 75px;
+  height: 75px;
+  background-color: #444;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+  background-color: #ffcc00;
+}
+
+/* ✅ Reserved & Selected Seats */
+.seat.reserved {
+  background-color: #555;
+  cursor: not-allowed;
+}
+.seat.selected {
+  background-color: #f44336;
+}
+
+/* ✅ Legend Section */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Button */
+.proceed-button {
+  padding: 15px;
+  font-size: 18px;
+  background: #ff5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.proceed-button:hover {
+  background: #e64a19;
+}
+/* ✅ Full-Page Outer Container */
+.seat-selection-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ✅ Outer Card (Now Covers Up to the Button) */
+.outer-card {
+  width: 90vw;
+  max-width: 1200px;
+  min-height: 80vh; /* ✅ Now it covers everything up to the button */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ✅ Inner Seat Selection Card with Highlighted Border */
+.inner-seat-card {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #ffcc00;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+/* ✅ Screen Section */
+.screen {
+  width: 100%;
+  height: 50px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Seat Grid */
+.seats-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Each Row Covers Full Width */
+.seat-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Seat Styling */
+.seat {
+  width: 75px;
+  height: 75px;
+  background-color: #444;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+  background-color: #ffcc00;
+}
+
+/* ✅ Reserved & Selected Seats */
+.seat.reserved {
+  background-color: #555;
+  cursor: not-allowed;
+}
+.seat.selected {
+  background-color: #f44336;
+}
+
+/* ✅ Legend Section */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Button (Now Inside the Outer Card) */
+.proceed-button {
+  padding: 15px;
+  font-size: 18px;
+  background: #ff5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.proceed-button:hover {
+  background: #e64a19;
+}
+/* ✅ Outer Card Covers Everything */
+.outer-card {
+  background: #1e1e1e; /* ✅ Matches black box */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-height: 95vh; /* ✅ Ensures everything fits in the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ✅ Ensures the whole section is within viewport */
+.seat-selection-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ✅ Full viewport height */
+}
+
+/* ✅ Button inside the box */
+.checkout-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.proceed-button {
+  width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.proceed-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+
+/* ✅ Ensure the container takes the full width */
+.seat-selection-container {
+  width: 100vw; /* Full viewport width */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* ✅ Ensure everything is within the viewport */
+.seat-selection-container {
+  width: 100vw;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* ✅ Outer Card (Keep It Within Page) */
+.outer-card {
+  width: 90%;
+  max-width: 800px;
+  height: 90vh; /* Fit within screen */
+  background: #181A20;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensures spacing */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Inner Card (Seats Area) */
+.inner-seat-card {
+  width: 100%;
+  flex-grow: 1; /* Ensures it scales properly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures no extra scrolling */
+}
+
+/* ✅ Seat Grid (Make It Smaller If Needed) */
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 90%;
+  max-height: 55vh; /* Restrict height */
+  overflow: hidden; /* Prevent extra scrolling */
+}
+
+/* ✅ Seat Size Adjustment */
+.seat {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+}
+
+/* ✅ Ensure Proceed Button is Always Visible */
+.checkout-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.proceed-button {
+  width: 80%;
+  max-width: 250px;
+  padding: 12px;
+  font-size: 16px;
+}
+.seat-icon {
+  font-size: 24px;
+}
+/* Seats Grid Layout */
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Row of Seats */
+.seat-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Individual Seat Styling */
+.seat {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Available Seat */
+.seat.available {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+/* Selected Seat */
+.seat.selected {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+
+/* Reserved Seat */
+.seat.reserved {
+  background-color: #f44336; /* Red */
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Seat Number */
+.seat-number {
+  font-weight: bold;
+}.inner-seat-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.outer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-height: 100vh; /* Ensure it doesn't exceed the viewport */
+  overflow-y: auto; /* Allow scrolling if needed */
+  padding: 10px;
+}
+/* ✅ Ensure Full Viewport Height */
+.seat-selection-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Make Inner Seat Card Fit */
+.inner-seat-card {
+  width: 90%;
+  max-width: 800px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Reduce Seat Size to Fit More Rows */
+.seat {
+  width: 35px;  /* Smaller width */
+  height: 35px; /* Smaller height */
+  font-size: 10px; /* Reduce text size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Arrange Seats in a Grid Layout */
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Ensure Screen and Other Elements Fit */
+.screen {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ✅ Adjust Outer Card Padding */
+.outer-card {
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ✅ Reduce Space Between Elements */
+.selected-seats,
+.checkout-container {
+  margin-top: 5px;
+}
+/* ✅ Full Page Layout */
+.seat-selection-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Outer Card Adjustments */
+.outer-card {
+  width: 95%;
+  max-width: 900px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Inner Card Styling */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Screen Styling */
+.screen {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ✅ Adjusted Seat Size */
+.seat {
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Grid Layout for Seats */
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Reduce Space for Better Fit */
+.selected-seats,
+.checkout-container {
+  margin-top: 5px;
+}
+/* ✅ Black Box - Ensure Everything Fits */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; /* ✅ Adjusted height */
+}
+
+/* ✅ Seat Grid - No Scrolling */
+.seats-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);  /* ✅ Ensures all rows are equally spaced */
+  grid-template-columns: repeat(8, 1fr); /* ✅ Fits all seats in a structured layout */
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ✅ Seats - Adjusted to Fit All */
+.seat {
+  width: 40px;  /* ✅ Reduced size */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Smaller Icon & Text */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Remove Any Extra Margins That Could Cause Scrolling */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* ✅ No extra scrolling */
+}
+
+/* ✅ Adjust Screen Placement */
+.screen {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+/* ✅ Legend Adjustments */
+.legend {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+/* ✅ Black Box - Ensure Everything Fits */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; /* ✅ Adjusted height */
+}
+
+/* ✅ Seat Grid - No Scrolling */
+.seats-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);  /* ✅ Ensures all rows are equally spaced */
+  grid-template-columns: repeat(8, 1fr); /* ✅ Fits all seats in a structured layout */
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ✅ Seats - Adjusted to Fit All */
+.seat {
+  width: 40px;  /* ✅ Reduced size */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Smaller Icon & Text */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Remove Any Extra Margins That Could Cause Scrolling */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* ✅ No extra scrolling */
+}
+
+/* ✅ Adjust Screen Placement */
+.screen {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+/* ✅ Legend Adjustments */
+.legend {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+/* ✅ Outer Black Box - Adjusted to Fit All */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px; /* ✅ Increased to fit all seats */
+}
+
+/* ✅ Seat Grid - No Scroll Inside */
+.seats-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);  /* ✅ Ensures all rows fit */
+  grid-template-columns: repeat(8, 1fr); /* ✅ Ensures all columns fit */
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  min-height: 200px; /* ✅ Adjusted height */
+}
+
+/* ✅ Seats - Adjusted Size */
+.seat {
+  width: 35px;  /* ✅ Smaller to fit all */
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Seat Icon & Text Adjustments */
+.seat-icon {
+  font-size: 12px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Make Page Scrollable */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* ✅ Allows page to scroll */
+}
+/* ✅ Outer Black Box - Adjusted to Fit All */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* ✅ Auto height so it fits everything */
+}
+
+/* ✅ Seats Grid - Ensures All Fit */
+.seats-grid {
+  display: flex;
+  flex-wrap: wrap;  /* ✅ Ensures all seats fit in one block */
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 700px; /* ✅ Adjusted for better fit */
+  padding: 10px;
+}
+
+/* ✅ Seat Size - Adjusted to Fit */
+.seat {
+  width: 40px;  /* ✅ Reduced to fit more */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Seat Number Adjustments */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Allow Page to Scroll */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* ✅ Page scrolls, but not the black box */
+}
+/* ✅ Seat Selection Page - Ensures Scroll */
+.seat-selection-container {
+  min-height: 100vh; /* Ensures full-page scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 100px 20px 20px; /* ✅ Added top padding to push below navbar */
+}
+
+/* ✅ Outer Black Box - Stays Below Navbar */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* ✅ Adjusts height automatically */
+}
+
+/* ✅ Seats Grid - Ensures All Fit */
+.seats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 700px; /* ✅ Adjusted for better fit */
+  padding: 10px;
+}
+
+/* ✅ Seat Size - Adjusted to Fit All */
+.seat {
+  width: 40px;  /* ✅ Reduced to fit more */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Seat Number Adjustments */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Prevent Black Box from Hiding Behind Navbar */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* ✅ Page can scroll */
+}
+
+.navbar {
+  position: fixed; /* Keeps navbar fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust as per navbar height */
+  background-color: white; /* Or your navbar color */
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+/* ✅ Seat Selection Page - Ensures Scroll */
+.seat-selection-container {
+  min-height: 100vh; /* Ensures full-page scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 100px 20px 20px; /* ✅ Added top padding to push below navbar */
+}
+
+/* ✅ Outer Black Box - Stays Below Navbar */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* ✅ Adjusts height automatically */
+}
+
+/* ✅ Seats Grid - Ensures All Fit */
+.seats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 700px; /* ✅ Adjusted for better fit */
+  padding: 10px;
+}
+
+/* ✅ Seat Size - Adjusted to Fit All */
+.seat {
+  width: 40px;  /* ✅ Reduced to fit more */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Seat Number Adjustments */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Prevent Black Box from Hiding Behind Navbar */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* ✅ Page can scroll */
+}
+
+.navbar {
+  position: fixed; /* Keeps navbar fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust as per navbar height */
+  background-color: white; /* Or your navbar color */
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+/* ✅ Home Page - Matches About Us */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px; /* Keeps content below navbar */
+  
+}
+
+/* ✅ Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+/* ✅ Left Text Area */
+.hero-text {
+  width: 50%;
+  text-align: left;
+  color: white;
+}
+
+/* ✅ Right Image */
+.hero-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ✅ Section Styling */
+.section {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Navbar (Fixed) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+/* Home Page Container */
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle, #4803f6 20%, #0a027d 40%,#03002a 80%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #FFFFFF; /* Sets default text color to white for better contrast */
+}
+
+/* Hero Section */
+.hero{
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #ee8294, #ff7eb3);
+ 
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fcfeff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #fafbfc;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-card {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  color:#ffffff;
+}
+
+.feature-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+
+  margin-bottom: 10px;
+  color:#ffffff;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color:#fff
+}
+
+.hero-section {
+
+  color: white; /* Ensure text is visible */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 2);
+}
+.movies-title {
+  padding-top: 100px; /* Adjust this value to match the navbar's height */
+}
+.movie-description {
+  font-size: 1rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #ddd;
+}
+/* Container layout (same as About Page) */
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Main content layout */
+.checkout-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  gap: 20px;
+}
+
+/* Left - Checkout Image */
+.checkout-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+/* Right - Order Summary */
+.checkout-text {
+  flex: 1;
+  color: white;
+  text-align: left;
+}
+
+.checkout-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7);
+}
+
+.checkout-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.checkout-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.3);
+}
+
+.summary-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Payment Options */
+.payment-option {
+  padding: 12px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.payment-option.selected {
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
+
+.payment-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Checkout Button */
+.checkout-button {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.checkout-button:hover {
+  background: #e6b800;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column;
+    padding: 20px;
+    max-width: 90%;
+  }
+  .checkout-image,
+  .checkout-text {
+    padding: 10px 0;
+    width: 100%;
+  }
+  .checkout-text {
+    text-align: center;
+  }
+}/* ✅ Seat Selection Page - Ensures Scroll */
+.seat-selection-container {
+  min-height: 100vh; /* Ensures full-page scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 100px 20px 20px; /* ✅ Added top padding to push below navbar */
+}
+
+/* ✅ Outer Black Box - Stays Below Navbar */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* ✅ Adjusts height automatically */
+}
+
+/* ✅ Seats Grid - Ensures All Fit */
+.seats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 700px; /* ✅ Adjusted for better fit */
+  padding: 10px;
+}
+
+/* ✅ Seat Size - Adjusted to Fit All */
+.seat {
+  width: 40px;  /* ✅ Reduced to fit more */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Seat Number Adjustments */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Prevent Black Box from Hiding Behind Navbar */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* ✅ Page can scroll */
+}
+
+.navbar {
+  position: fixed; /* Keeps navbar fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust as per navbar height */
+  background-color: white; /* Or your navbar color */
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+/* ✅ Black Box (Adjusted to Fit All Rows) */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px; /* ✅ Reduced height */
+}
+
+/* ✅ Seat Grid - Adjusted */
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* ✅ Each Seat Row */
+.seat-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* ✅ Seat Styling - Smaller & Fitting */
+.seat {
+  width: 45px;
+  height: 45px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Reduce Icon & Text Size */
+.seat-icon {
+  font-size: 18px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Outer Card - Adjusted */
+.outer-card {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ Adjust Screen */
+.screen {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+/* ✅ Legend Adjustments */
+.legend {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+/* ✅ Seat Selection Page - Allows Scrolling */
+.seat-selection-container {
+  min-height: 100vh; /* ✅ Ensures page scrolls */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* ✅ Outer Black Box - Auto-Expands to Fit All */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* ✅ Adjusts height automatically */
+}
+
+/* ✅ Seats Grid - Ensures All Fit */
+.seats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 700px; /* ✅ Adjusted for better fit */
+  padding: 10px;
+}
+
+/* ✅ Seat Size - Adjusted to Fit All */
+.seat {
+  width: 40px;  /* ✅ Reduced to fit more */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Seat Number Adjustments */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Ensures Full Page Scrolls */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* ✅ Page can scroll */
+}
+/* ✅ Seat Selection Page - Ensures Scroll */
+.seat-selection-container {
+  min-height: 100vh; /* Ensures full-page scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 100px 20px 20px; /* ✅ Added top padding to push below navbar */
+}
+
+/* ✅ Outer Black Box - Stays Below Navbar */
+.inner-seat-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* ✅ Adjusts height automatically */
+}
+
+/* ✅ Seats Grid - Ensures All Fit */
+.seats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 700px; /* ✅ Adjusted for better fit */
+  padding: 10px;
+}
+
+/* ✅ Seat Size - Adjusted to Fit All */
+.seat {
+  width: 40px;  /* ✅ Reduced to fit more */
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Seat Number Adjustments */
+.seat-icon {
+  font-size: 14px;
+}
+.seat-number {
+  font-size: 10px;
+}
+
+/* ✅ Prevent Black Box from Hiding Behind Navbar */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* ✅ Page can scroll */
+}
+
+.navbar {
+  position: fixed; /* Keeps navbar fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust as per navbar height */
+  background-color: white; /* Or your navbar color */
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+/* ✅ Seat Selection Page Container */
+.seat-selection-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ✅ Outer Card (Background Box) */
+.outer-card {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
+
+/* ✅ Title */
+.seat-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7);
+}
+
+/* ✅ Inner Seat Selection Box */
+.inner-seat-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* ✅ Screen Representation */
+.screen {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+/* ✅ Seat Grid */
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ✅ Seat Row */
+.seat-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ✅ Individual Seat */
+.seat {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* ✅ Seat Icon */
+.seat-icon {
+  font-size: 24px;
+}
+
+/* ✅ Seat Number */
+.seat-number {
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+/* ✅ Seat Colors */
+.available {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.available:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.selected {
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
+
+.reserved {
+  background: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* ✅ Seat Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.available-icon {
+  color: white;
+}
+
+.selected-icon {
+  color: #ffcc00;
+}
+
+.reserved-icon {
+  color: gray;
+}
+
+/* ✅ Selected Seats */
+.selected-seats {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* ✅ Proceed Button */
+.checkout-container {
+  margin-top: 20px;
+}
+
+.proceed-button {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.proceed-button:hover {
+  background: #e6b800;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .outer-card {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .seat {
+    width: 35px;
+    height: 35px;
+  }
+
+  .seat-icon {
+    font-size: 20px;
+  }
+
+  .seat-number {
+    font-size: 0.7rem;
+  }
+
+  .legend {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proceed-button {
+    font-size: 1rem;
+  }
+}
+.inner-seat-card {
+  height: 0 !important;
+  padding: 0 !important;
+}
+
+.checkout_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.proceed-button,
+.payment-button {
+  width: 250px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.proceed-button {
+  background-color: #ffcc00 ; /* Blue */
+  color: rgb(5, 5, 5);
+  margin-bottom: 10px;
+}
+
+.proceed-button:hover {
+  background-color: #cf9e08;
+}
+
+.payment-button {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.payment-button:hover {
+  background-color: #218838;
+}
+
+/* Disabled button style */
+.proceed-button:disabled,
+.payment-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.checkout-container {
+  width: 100vw; /* Full viewport width */
+
+  max-width: 1500px; /* Increased width */
+  margin: 10px auto;
+  padding: 30px;
+  background: rgba(9, 2, 47, 0.362) !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-content {
+  width: 95%;
+  max-width: 1600px;
+  background: rgba(8, 8, 8, 0.701); /* ✅ Set to white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.checkout-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.checkout-image img {
+  width: 100%;
+  max-width: 350px; /* Bigger Image */
+  border-radius: 10px;
+}
+
+.checkout-text {
+  flex: 3; /* Takes more space */
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+}
+
+.summary-box {
+  background: #1e1e1e; /* Black box */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; /* Full width */
+  display: block;
+  font-size: 18px;
+}
+
+.payment-options {
+  display:grid;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.payment-option {
+  grid: 1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: bold;
+  background: #e0e0e0;
+}
+
+.payment-option:hover {
+  background: #c0c0c0;
+}
+
+.payment-option.selected {
+  background: #007bff; /* Blue box */
+  color: white;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  transition: 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.checkout-button:hover {
+  background-color: #218838;
+}
+body {
+  background: rgb(4, 1, 53) !important;
+}
+.feature-card {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  border-radius: 10px;
+  padding: 30px; /* Increased padding */
+  width: 350px; /* Increased width */
+  height: 300px; /* Increased height */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  color: #ffffff;
+}
+
+.feature-card img {
+  width: 120px; /* Increased image size */
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+.feature-card h2 {
+  font-size: 1.8rem; /* Slightly larger text */
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.feature-card p {
+  font-size: 1.2rem; /* Increased text size */
+  color: #fff;
+}
+.feature-card {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px; /* Increased width */
+  height: 400px; /* Increased height */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensures proper spacing */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  color: #ffffff;
+}
+
+.feature-card img {
+  width: 400%; /* Make image fill the card width */
+  height: 100%; /* Make image fill the card height */
+  object-fit: cover; /* Ensures the image covers the entire card without stretching */
+  position:static; /* Position it properly */
+  top: 0;
+  left: 0;
+  border-radius: 10px; /* Keeps rounded corners */
+  z-index: -1; /* Moves image to background so text stays on top */
+}
+
+.feature-card h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.feature-card p {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0 10px; /* Adds some padding */
+}
+/* ✅ Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+/* ✅ Feature Card */
+.feature-card {
+  width: 400px; /* Slim and tall */
+  height: 400px; /* Matches movie poster style */
+  background: #141122; /* Dark theme */
+  border-radius: 12px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Fix Image Size */
+.feature-card img {
+  width: 300px;
+  height: 200px; /* Fill more space like movie posters */
+  object-fit: cover; /* Crop to fit perfectly */
+  border-radius: 0; /* Removes unwanted border */
+}
+
+/* ✅ Feature Content */
+.feature-content {
+  padding: 12px;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature-content h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.feature-content p {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+/* ✅ Image Container */
+.feature-image-container {
+  width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  width: 300px;
+  height: 200px; /* Adjusted to match screenshot */
+ 
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.home-container {  
+  padding: 20px;  
+  text-align: center;  
+}  
+
+.hero {  
+  background-color: #282c34;  
+  color: white;  
+  padding: 50px 20px;  
+}  
+
+.features {  
+  display: flex;  
+  flex-wrap: wrap;  
+  justify-content: center; /* Center contents */  
+  margin-top: 20px;  
+}  
+
+.feature-card {  
+  background-color: rgb(251, 187, 227);  
+  border: 1px solid #ddd;  
+  border-radius: 8px;  
+  width: 250px; /* Set a fixed width */  
+  margin: 10px; /* Space between cards */  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  overflow: hidden; /* Ensures image doesn't overflow */  
+}  
+
+.feature-image-container {  
+  height: 150px; /* Set fixed height for images */  
+  overflow: hidden;  
+}  
+
+.feature-image {  
+  width: 100%;  
+  height: auto; /* Maintain aspect ratio */  
+  object-fit: cover; /* Cover the container without distortion */  
+}  
+
+.feature-content {  
+  padding: 15px;  
+}  
+
+.feature-content h3 {  
+  margin: 10px 0;  
+  font-size: 1.25rem; /* Adjustable size */  
+}  
+
+.feature-content p {  
+  margin: 5px 0;  
+  font-size: 1rem; /* Adjustable size */  
+}  
+
+.feature-content a {  
+  color: rgb(253, 253, 255); /* Change link color */  
+  text-decoration: none;  
+}  
+.feature-card {
+  max-width: 600px; /* Adjust the width as needed */
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-image-container {
+  width: 100%;
+  height: 400px; /* Set a fixed height for uniformity */
+  overflow: hidden;
+}
+
+.feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-card {
+  width: 90%; /* Wider cards */
+  max-width: 600px; /* Limit max width */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+.feature-image-container {
+  width: 100%;
+  height: 300px; /* Bigger image container */
+}
+
+.feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full image is visible */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.feature-content {
+  padding: 15px;
+}
+
+.feature-content h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.feature-content p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.feature-content a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #ff3d00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.feature-content a:hover {
+  background: #d32f2f;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-card {
+  width: 90%;
+  max-width: 600px;
+  background: #fb8dd1;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.image-card {
+  width: 100%;
+  background: #fe5e1fa5; /* Light background */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.feature-image {
+  width: 100%;
+  height: 280px; /* Bigger images */
+  object-fit: cover; /* Prevents stretching */
+  display: block;
+}
+
+.feature-content {
+  padding: 15px;
+  width: 100%;
+}
+
+.feature-content h3 {
+  margin: 10px 0;
+  font-size: 1.7;
+}
+
+.feature-content p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.feature-content a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #0000005a;
+  color: #faf4f4;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+
+.feature-content a:hover {
+  background: #3216266e;
+}
+.image-card {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the container */
+}
+/* ✅ Feature Card */
+.feature-card {
+  width: 350px; /* Set card size */
+  height: 500px; /* Increase height */
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fcc997;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Image Card - Separate Div for Image */
+.image-card {
+  width: 100%;
+  height: 65%; /* Adjust image height */
+  overflow: hidden;
+}
+
+/* ✅ Full Image */
+.feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure full image is shown */
+}
+
+/* ✅ Content Section */
+.feature-content {
+  padding: 15px;
+  background:  #b63e0ffc;
+  flex-grow: 1; /* Makes sure text takes remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+  background: radial-gradient( #f45f31, #f9a434);
+}
+/* ✅ Image Card with Background Image */
+.image-card {
+  width: 100%;
+  height: 65%; /* Adjust as needed */
+  background-size: contain; /* Prevents zooming */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgb(249, 165, 40);
+  overflow: hidden;
+}
+
+
+.about-container {
+  display: flex
+;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #ffffff;
+  text-align: center;
+  padding-top:100px;
+  box-shadow:#ffbc14;
+}
+.hero{
+  width: 50%;
+  max-width: 900px; /* Prevent it from getting too big */
+  height: 300px; /* Reduce height */
+  padding: 20px; /* Adjust spacing */
+  border-radius: 15px; /* Optional: Adjust corner roundness */
+  margin: auto; /* Keep it centered */
+  position:center;
+}
+
+
+/* Make sure the video stays inside */
+.hero-video video {
+  width: 40%;
+  max-width: 400px; /* Prevents it from getting too large */
+  border-radius: 10px;
+}
+/* Reduce size of home container */
+.home-container {
+  display: flex;  
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Space between text & video */
+  padding: 20px;
+  background: linear-gradient(to right, #ff8000, #ffaf40); /* Orange Gradient */
+  width: 80%; /* Reduce width */
+  height: 60vh; /* Reduce height */
+  margin: auto; /* Center it */
+  border-radius: 15px; /* Rounded corners */
+  position: relative;
+}
+
+/* Keep the hero text aligned properly */
+.hero-content {
+  flex: 1; /* Take up available space */
+  padding: 20px;
+}
+
+/* Fix the video position & make it small */
+.hero-video {
+  position: absolute; /* Fix position inside container */
+  bottom: 10px; /* Adjust this value to place it properly */
+  right: 20px; /* Keep it towards the right */
+}
+
+.hero-video video {
+  width: 150px; /* Small size */
+  height: auto;
+  border-radius: 10px;
+}
+.home-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 🎬 Small Video Background Card */
+.video-card {
+  position: relative;
+  width:300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* Space from hero section */
+}
+
+.background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text readable */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.video-card {
+  width: 100vw;  /* Full viewport width */
+  height: 30vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fills the area */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-overlay {
+  position: relative;
+  z-index: 2; /* Ensures text appears above video */
+  text-align: center;
+  font-size: larger;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Adds slight transparency */
+  padding: 20px;
+  border-radius: 10px;
+}
+.input-box {
+  background: rgba(255, 255, 255, 0); /* Light input fields */
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.pay-now-button {
+  background-color: #ff6600; /* Bright orange for a standout effect */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 20px auto; /* Centers the button */
+}
+
+.pay-now-button:hover {
+  background-color: #e65c00; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.pay-now-button:active {
+  transform: scale(0.95); /* Shrinks slightly when clicked */
+}
+
+.pay-now-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  transition: 0.3s ease-in-out;
+  margin-top: 20px;
+}
